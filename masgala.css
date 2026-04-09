@@ -1,0 +1,223 @@
+/* Ählisini arassalamak */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif, Arial;
+    background-color: #f0f2f5; /* Ýumşak çal reňk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Başlyk */
+.begenc {
+  letter-spacing: 2px;
+    color: #1b4332; /* Goýy ýaşyl */
+    margin: 30px 0;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 4px solid #40916c;
+    padding-bottom: 5px;
+}
+
+/* Konteýner - Bu jedweliň sygymyny dolandyrýar */
+.box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 95vw; /* Ekran giňligine görä uýgunlaşýar */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Doglan ýyly görünmese, şu setir sag tarapa süýşürmäge rugsat berýär */
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Jedweliň gaty gysylyp, harplaryň garyşmazlygy üçin */
+}
+
+/* Başlyk sütünleri */
+thead th {
+    background-color: #52b788; /* Owadan açyk ýaşyl */
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Setirler */
+tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #edf2f4;
+    color: #2d6a4f;
+    font-size: 15px;
+}
+
+/* T/b sütüni (sanlar) */
+tbody td:first-child {
+    font-weight: bold;
+    color: #2d6a4f;
+    width: 40px;
+}
+
+/* Gezekleşýän reňkler */
+tbody tr:nth-child(even) {
+    background-color: #f7fff7;
+}
+
+/* Üstüne kursor getireniňde */
+tbody tr:hover {
+    background-color: #d8f3dc;
+    transition: 0.2s ease-in-out;
+}
+/* Gök sözbaşy üçin */
+.guwanc {
+    color: #0056b3;
+    margin: 40px 0 20px 0;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 4px solid #007bff;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* Gök tema üçin aýratyn klass */
+.blue-theme thead th {
+    background-color: #007bff; /* Gök reňk */
+}
+
+.blue-theme tbody td {
+    color: #004085;
+}
+
+.blue-theme tbody td:first-child {
+    color: #007bff;
+}
+
+.blue-theme tbody tr:nth-child(even) {
+    background-color: #f0f7ff;
+}
+
+.blue-theme tbody tr:hover {
+    background-color: #d1ecf1;
+}
+/* Sary sözbaşy */
+.parahat {
+    color: #856404; /* Goýy sary/bürünç, okalmasy aňsat bolar ýaly */
+    margin: 40px 0 20px 0;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 4px solid #ffc107;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* Sary tema üçin klass */
+.yellow-theme thead th {
+    background-color: #ffc107; /* Altyn sary */
+    color: #212529; /* Sarynyň üstünde gara tekst gowy görünýär */
+}
+
+.yellow-theme tbody td {
+    color: #664d03;
+}
+
+.yellow-theme tbody td:first-child {
+    color: #856404;
+    font-weight: bold;
+}
+
+.yellow-theme tbody tr:nth-child(even) {
+    background-color: #fff9e6; /* Örän açyk sary */
+}
+
+.yellow-theme tbody tr:hover {
+    background-color: #fff3cd; /* Üstüne gelende azajyk goýalýar */
+}
+/* Näzigiň bölümi - Zenan maşgala laýyk näzik reňk */
+.nazik {
+    color: #5e35b1; /* Goýy melewşe */
+    margin: 40px 0 20px 0;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 4px solid #9575cd; /* Açyk melewşe liniýa */
+    padding-bottom: 5px;
+}
+
+/* Melewşe tema dizaýny */
+.nazik-theme thead th {
+    background-color: #7e57c2; /* Owadan melewşe */
+    color: white;
+}
+
+.nazik-theme tbody td {
+    color: #4527a0; /* Tekst reňki */
+}
+
+.nazik-theme tbody td:first-child {
+    color: #673ab7;
+    font-weight: bold;
+}
+
+/* Setirleriň reňki */
+.nazik-theme tbody tr:nth-child(even) {
+    background-color: #f3e5f5; /* Örän ýumşak melewşe */
+}
+
+/* Üstüne gelende (Hover) */
+.nazik-theme tbody tr:hover {
+    background-color: #ede7f6;
+    transition: 0.3s;
+}
+/* Ähli jedwel bölümleriniň başlangyç ýagdaýy */
+section, .box, h1 {
+    opacity: 0; /* Başda görünmeýär */
+    transform: translateY(30px); /* Azajyk aşakda dur */
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Her bölümiň yzygiderli çykmagy üçin gijikdirme (Delay) */
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.5s; }
+section:nth-child(3) { animation-delay: 0.8s; }
+section:nth-child(4) { animation-delay: 1.1s; }
+
+/* Syçanjygy (kursory) üstüne getireniňde jedweliň ulalmagy */
+.box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.02); /* Azajyk ulalýar */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Kölegesi güýçlenýär */
+    z-index: 10;
+}
+
+/* Animasiýa kody */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablisa setirleriniň reňkiniň üýtgemegi (hover) */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    filter: brightness(0.95); /* Üstüne gelende azajyk goýalýar */
+    cursor: default;
+}
